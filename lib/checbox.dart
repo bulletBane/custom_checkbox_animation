@@ -55,6 +55,12 @@ class _CheckBoxState extends State<CircleCheckBox>
   }
 
   @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     checkValue();
     return InkWell(
